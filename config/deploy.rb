@@ -1,7 +1,7 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.14.0"
 
-set :application, "ledger"
+set :application, "online_jewellery"
 set :repo_url, "https://github.com/mamirad/online_jewellery.git"
 # set :git_http_username, 'amirad2020@gmail.com'
 # set :git_http_password, 'India4@)'
