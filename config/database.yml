@@ -49,8 +49,8 @@ development:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-# production:
-#   <<: *default
-#   database: salesdoor_production
-#   username: salesdoor
-#   password: <%= ENV['SALESDOOR_DATABASE_PASSWORD'] %>
+production:
+  <<: *default
+  username: deploy
+  password: India4@)
+  database: online_jewellery_development
