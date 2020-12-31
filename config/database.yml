@@ -1,61 +1,15 @@
 default: &default
   adapter: postgresql
-  encoding: unicode
-  # For details on connection pooling, see Rails configuration guide
-  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  encoding: utf8
+  username: postgres
+  password: root
+  template: template1
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-
 production:
   <<: *default
   username: deploy
   password: India4@)
   database: online_jewellery_development
-
-
 development:
   <<: *default
   database: online_jewellery_development
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#default: &default
-#  adapter: mysql2
-#  encoding: utf8
-#  pool: <%#= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-#  username: admin
-#  password: Pakistan7*^
-#  socket: /var/run/mysqld/mysqld.sock
-
-#development:
-#  <<: *default
-#  database: sms_development
-
-#test:
-#  <<: *default
-#  database: sms_test
-
-
-#production:
-#  <<: *default
-#  database: sms_production
-#  username: sms
-#  password: <%#= ENV['SMS_DATABASE_PASSWORD'] %>
