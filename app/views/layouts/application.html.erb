@@ -7,10 +7,19 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
   </head>
 
   <body>
+  <%= render 'partials/header1'%>
+  <div class="container">
+    <div id="gototop"> </div>
+    <%= render 'partials/header2'%>
+    <%= render 'partials/navbar'%>
     <%= yield %>
+  <%=render 'partials/footer'%>
+  </div> 
   </body>
 </html>
