@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @item.name %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @item.quantity %>
+</p>
+
+<p>
+  <strong>Purchase price:</strong>
+  <%= @item.purchase_price %>
+</p>
+
+<p>
+  <strong>Sale price:</strong>
+  <%= @item.sale_price %>
+</p>
+
+<p>
+  <strong>Total sale:</strong>
+  <%= @item.total_sale %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @item.status %>
+</p>
+
+<p>
+  <strong>Is warranty:</strong>
+  <%= @item.is_warranty %>
+</p>
+
+<p>
+  <strong>Returnable:</strong>
+  <%= @item.returnable %>
+</p>
+
+<p>
+  <strong>Condition:</strong>
+  <%= @item.condition %>
+</p>
+
+<p>
+  <strong>Alert on:</strong>
+  <%= @item.alert_on %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @item.description %>
+</p>
+
+<p>
+  <strong>User account:</strong>
+  <%= @item.user_account_id %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @item.category_id %>
+</p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @item.brand %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @item.company %>
+</p>
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>

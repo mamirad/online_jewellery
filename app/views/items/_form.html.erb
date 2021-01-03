@@ -1,0 +1,88 @@
+<%= form_with(model: item, local: true) do |form| %>
+  <% if item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(item.errors.count, "error") %> prohibited this item from being saved:</h2>
+
+      <ul>
+        <% item.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quantity %>
+    <%= form.number_field :quantity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :purchase_price %>
+    <%= form.number_field :purchase_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sale_price %>
+    <%= form.number_field :sale_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :total_sale %>
+    <%= form.number_field :total_sale %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.select :status,options_for_select(Item.statuses.keys,item.status) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_warranty %>
+    <%= form.select :is_warranty, options_for_select(Item.is_warranties.keys,item.is_warranty)%>
+  </div>
+
+  <div class="field">
+    <%= form.label :returnable %>
+    <%= form.select :retunable, options_for_select(Item.returnables.keys,item.returnable)%>
+  </div>
+
+  <div class="field">
+    <%= form.label :condition %>
+    <%= form.select :condition, options_for_select(Item.conditions.keys,item.condition)%>
+  </div>
+
+  <div class="field">
+    <%= form.label :alert_on %>
+    <%= form.number_field :alert_on %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+
+  <div class="field">
+    <%= form.label :category_id %>
+    <%= form.number_field :category_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :brand %>
+    <%= form.text_field :brand %>
+  </div>
+
+  <div class="field">
+    <%= form.label :company %>
+    <%= form.text_field :company %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,10 +1,10 @@
 default: &default
   adapter: postgresql
-  # encoding: unicode
-  encoding: utf8
-  username: postgres
-  password: root
-  template: template1
+  encoding: unicode
+  # encoding: utf8
+  # username: postgres
+  # password: root
+  # template: template1
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 production:
   <<: *default

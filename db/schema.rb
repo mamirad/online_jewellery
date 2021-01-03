@@ -10,10 +10,48 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_01_075106) do
+ActiveRecord::Schema.define(version: 2021_01_03_081525) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "attachments", force: :cascade do |t|
+    t.string "name"
+    t.bigint "attachmentable_id"
+    t.string "attachmentable_type"
+    t.string "attachment_type"
+    t.integer "user_account_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["attachmentable_type", "attachmentable_id"], name: "index_attachments_on_attachmentable_type_and_attachmentable_id"
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "category_name"
+    t.integer "parent_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.string "name"
+    t.integer "quantity"
+    t.integer "purchase_price"
+    t.integer "sale_price"
+    t.integer "total_sale"
+    t.integer "status"
+    t.integer "is_warranty"
+    t.integer "returnable"
+    t.integer "condition"
+    t.integer "alert_on"
+    t.string "description"
+    t.integer "user_account_id"
+    t.integer "category_id"
+    t.string "brand"
+    t.string "company"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "user_accounts", force: :cascade do |t|
     t.string "email", default: "", null: false

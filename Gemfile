@@ -28,6 +28,8 @@ gem 'jbuilder', '~> 2.7'
 #--------------self gems-------------
 gem 'devise'
 gem 'omniauth-facebook'
+gem 'carrierwave'
+gem 'mini_magick'
 
 #--------------end---------
 

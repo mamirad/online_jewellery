@@ -1,0 +1,35 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  quantity: 1
+  purchase_price: 1
+  sale_price: 1
+  total_sale: 1
+  status: 1
+  is_warranty: 1
+  returnable: 1
+  condition: 1
+  alert_on: 1
+  description: MyString
+  user_account_id: 1
+  category_id: 1
+  brand: MyString
+  company: MyString
+
+two:
+  name: MyString
+  quantity: 1
+  purchase_price: 1
+  sale_price: 1
+  total_sale: 1
+  status: 1
+  is_warranty: 1
+  returnable: 1
+  condition: 1
+  alert_on: 1
+  description: MyString
+  user_account_id: 1
+  category_id: 1
+  brand: MyString
+  company: MyString
