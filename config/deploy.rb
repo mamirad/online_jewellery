@@ -3,8 +3,7 @@ lock "~> 3.14.0"
 
 set :application, "online_jewellery"
 set :repo_url, "https://github.com/mamirad/online_jewellery.git"
-# set :git_http_username, 'amirad2020@gmail.com'
-# set :git_http_password, 'India4@)'
+
 
 # Deploy to the user's home directory
 set :deploy_to, "/home/deploy/#{fetch :application}"
@@ -12,6 +11,7 @@ set :deploy_to, "/home/deploy/#{fetch :application}"
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', '.bundle', 'public/system', 'public/uploads'
 
 set :keep_releases, 5
+
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
