@@ -53,7 +53,7 @@
 
   <div class="field">
     <%= form.label :condition %>
-    <%= form.select :condition, options_for_select(Item.conditions.keys,item.condition)%>
+    <%= form.select :condition, options_for_select(Item.is_conditions.keys,item.condition)%>
   </div>
 
   <div class="field">
