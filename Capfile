@@ -1,4 +1,4 @@
-
+set :stage, :production
 
 
 # Load DSL and set up stages
